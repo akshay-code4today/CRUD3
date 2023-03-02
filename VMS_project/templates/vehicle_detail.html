@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block title %}
+   Details Page
+{% endblock %}
+
+{% block content %}
+<h3 style="">Detail of Vehicle</h3>
+<ol>
+    <li>Vehicle ID:{{vehicle.id}}</li>
+    <li>Vehicle Number:{{vehicle.Vehicle_Number}}</li>
+    <li>Vehicle Type:{{vehicle.Vehicle_Type}}</li>
+    <li>Vehicle Model:{{vehicle.Vehicle_Model}}</li>
+    <li>Vehicle Description:{{vehicle.Vehicle_Description}}</li>
+</ol>
+<a href="update/{{vehicle.id}}" class="btn btn-warning">Update</a>
+<a href="delete/{{vehicle.id}}" class="btn btn-danger">Delete</a>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Delete Confirmation
+{% endblock %}
+
+{% block content %}
+<div id="confirmation">
+   <h1>Confirmation Page</h1>
+   <h3>Delete {{Vehicle.id}} with {{Vehicle.Vehicle_Number}} ???</h3>
+   <form method="POST">
+    {% csrf_token %}
+   <input type="submit" value="delete" class="btn btn-danger">
+   <a href="{% url 'vehicle_list' %}"  class="btn btn-success">Cancel</a>
+   </form>
+
+</div>
+{% endblock %}

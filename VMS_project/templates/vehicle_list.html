@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+{% block title %}
+   List of all vehicles
+{% endblock %}
+
+{% block content %}
+<h1>List of all Vehicles According To Their Vehicular Number</h1>
+<ol>
+  {%for vehicle in vehicle_list%}
+  <h2><li><a href="detail/{{vehicle.id}}">{{vehicle.Vehicle_Number}}</a></li></h2>
+</ol>
+{%endfor%}
+
+{%endblock%}
